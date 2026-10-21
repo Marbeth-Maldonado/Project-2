@@ -9,5 +9,6 @@ public class Aquarium {
         PainterAPI painter = canvas.getPainter();
         painter.setSpeed(10); // Lower number means faster, zero means as fast as possible.
         painter.forward(100);
+        //fish
     }
 }
