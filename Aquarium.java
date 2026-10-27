@@ -62,3 +62,33 @@ public class Aquarium extends JPanel {
 
         double t = ((System.currentTimeMillis() - startTime) % 9500) / 1000.0;
         // body language
+        double armsAngle = 0;
+        double bodybounce = 0;
+        double bodylean = 0;
+        double shoulderDrop = 0;
+        double torsoShift = 0;
+        // face support
+        double headtTurn = 0;
+        double eyeswiden = 0;
+        double eyeshiftX = 0;
+        double cannonsGlow = 0;
+        double blastSize = 0;
+        double shutOff = false;
+        // stage 1 idle bob 
+        if (t < 2.2) {
+            bodybounce = Math.sin(t * 2.5) * 2.2;
+            bodylean = Math.sin(t * 1.2) * 0.6;
+        }
+        // stage 2 raise arms
+       else if (t < 3.3) {
+        double p = easeout ((t - 2.2) / 1.1);
+        armsAngle = -1.0 * p;
+        bodybounce =-3.5 * p;
+        bodylean =  5.0 * p;
+        shoulderDrop = -2.5 * p;
+        }
+
+
+       }
+    }
+
